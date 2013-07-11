@@ -1,0 +1,29 @@
+<h1>Listing movie_apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>String</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie_apps.each do |movie_app| %>
+      <tr>
+        <td><%= movie_app.title %></td>
+        <td><%= movie_app.string %></td>
+        <td><%= link_to 'Show', movie_app %></td>
+        <td><%= link_to 'Edit', edit_movie_app_path(movie_app) %></td>
+        <td><%= link_to 'Destroy', movie_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie app', new_movie_app_path %>

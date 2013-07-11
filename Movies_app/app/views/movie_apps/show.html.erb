@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie_app.title %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @movie_app.string %>
+</p>
+
+<%= link_to 'Edit', edit_movie_app_path(@movie_app) %> |
+<%= link_to 'Back', movie_apps_path %>

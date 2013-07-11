@@ -1,0 +1,25 @@
+<%= form_for(@movie_app) do |f| %>
+  <% if @movie_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie_app.errors.count, "error") %> prohibited this movie_app from being saved:</h2>
+
+      <ul>
+      <% @movie_app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
